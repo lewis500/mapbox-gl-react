@@ -1,0 +1,15 @@
+
+Todo:
+  ☐ take center  and other position properties out of the base style
+  ☐ fake data
+✔   ☐ create fake data @done(18-05-20 06:18)
+✔   ☐ display fake data @done(18-05-20 06:18)
+✔   ☐ make a checkbox for displaying fake data @done(18-05-20 07:18)
+✔   ☐ implement diffing @done(18-05-20 07:18)
+  ☐ make a jupyter notebook which creates fake data
+  ☐ implement sockets
+  ☐ have the map update when the sockets changes
+
+Presentation:
+  ☐ show how diffing function works and how selectors reduce diffing by preserving the object identity
+

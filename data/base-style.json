@@ -1,0 +1,88 @@
+{
+    "version": 8,
+    "name": "Basic",
+    "metadata": {
+        "mapbox:autocomposite": true,
+        "mapbox:type": "template"
+    },
+    "light": {
+        "anchor": "map"
+    },
+    "sources": {
+        "composite": {
+            "url": "mapbox://mapbox.mapbox-streets-v7",
+            "type": "vector"
+        }
+    },
+    "sprite": "mapbox://sprites/lewis500/cj969dawi6are2sqmi03d4ncd",
+    "glyphs": "mapbox://fonts/lewis500/{fontstack}/{range}.pbf",
+    "layers": [
+        {
+            "id": "background",
+            "type": "background",
+            "paint": {
+                "background-color": "#F6F6F4"
+            }
+        },
+        {
+            "id": "waterway",
+            "type": "line",
+            "source": "composite",
+            "source-layer": "waterway",
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "LineString"
+                ],
+                [
+                    "in",
+                    "class",
+                    "canal",
+                    "river"
+                ]
+            ],
+            "layout": {
+                "visibility": "none"
+            },
+            "paint": {
+                "line-color": "#002D73",
+                "line-width": {
+                    "base": 1.4,
+                    "stops": [
+                        [
+                            8,
+                            0.5
+                        ],
+                        [
+                            20,
+                            15
+                        ]
+                    ]
+                },
+                "line-opacity": 0.5
+            }
+        },
+        {
+            "id": "water",
+            "type": "fill",
+            "source": "composite",
+            "source-layer": "water",
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "fill-color": "#C8D2D3",
+                "fill-opacity": 0.5,
+                "fill-outline-color": "#C8D2D3"
+            }
+        }
+    ],
+    "created": "2017-10-24T23:44:53.256Z",
+    "id": "cj969dawi6are2sqmi03d4ncd",
+    "modified": "2017-11-15T21:54:33.687Z",
+    "owner": "lewis500",
+    "visibility": "private",
+    "draft": false
+}

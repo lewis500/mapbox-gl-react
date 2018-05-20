@@ -1,9 +1,10 @@
 //@flow
 export type State = {
-    message: string
+    dataActive: boolean,
+    style: Object,
+    data:number[][]
 };
-export type MapStateToProps<P> = (state:State)=> P;
 export type Action = {
-    type: 'SET_MESSAGE',
-    payload: string
+    type: 'TOGGLE_DATA',
 }
+export type Dispatch = (a:Action)=>void;

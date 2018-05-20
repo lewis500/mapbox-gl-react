@@ -3,10 +3,10 @@ import type { State, Action } from "./types.js";
 
 export default (state: State, action: Action) => {
   switch (action.type) {
-    case "SET_MESSAGE":
+    case "TOGGLE_DATA":
       return {
         ...state,
-        message: action.payload
+        dataActive: !state.dataActive
       };
     default:
       return state;
