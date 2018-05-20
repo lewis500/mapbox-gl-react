@@ -1,6 +1,7 @@
 {
   "name": "websocket_vis",
   "dependencies": {
+    "body-parser": "^1.18.3",
     "d3-random": "^1.1.0",
     "express": "^4.16.3",
     "flow-typed": "^2.4.0",
@@ -9,7 +10,8 @@
     "react-dom": "^16.3.2",
     "react-redux": "^5.0.7",
     "redux": "^4.0.0",
-    "reselect": "^3.0.1"
+    "reselect": "^3.0.1",
+    "socket.io": "^2.1.1"
   },
   "scripts": {
     "dev": "node-dev server.js"
